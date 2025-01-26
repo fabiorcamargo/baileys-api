@@ -7,7 +7,7 @@ import WhatsappService from "@/whatsapp/service";
 export const list: RequestHandler = async (req, res) => {
 	try {
 		const { sessionId } = req.params;
-		const { cursor = undefined, limit = 25, search } = req.query;
+		const { cursor = undefined, limit = 25 } = req.query;
 		const groups = await prisma.contact.findMany({
 			cursor: cursor ? { pkId: Number(cursor) } : undefined,
 			take: Number(limit),

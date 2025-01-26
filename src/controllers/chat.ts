@@ -1,4 +1,4 @@
-import type { RequestHandler } from "express";
+import { RequestHandler } from "express";
 import { logger, serializePrisma } from "@/utils";
 import type { Chat, Message } from "@prisma/client";
 import { prisma } from "@/config/database";

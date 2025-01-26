@@ -177,7 +177,7 @@ export const deleteMessageForMe: RequestHandler = async (req, res) => {
 		 * }
 		 * @returns {object} result
 		 */
-		const { jid, type = "number", message } = req.body;
+		const { jid, type = "number" } = req.body;
 		const session = WhatsappService.getSession(sessionId)!;
 
 		const exists = await WhatsappService.jidExists(session, jid, type);
